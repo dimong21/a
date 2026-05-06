@@ -11,14 +11,14 @@ ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
 GOLDEN_KEY = os.getenv("GOLDEN_KEY")
 
 # Настройки парсинга
-PARSE_INTERVAL = int(os.getenv("PARSE_INTERVAL", "60"))
+PARSE_INTERVAL = int(os.getenv("PARSE_INTERVAL", "300"))
 MAX_ITEMS = int(os.getenv("MAX_ITEMS", "10"))
 
 # Файлы для хранения
 AUTODELIVERY_FILE = "autodelivery_items.json"
 LAST_SALES_FILE = "last_sales.json"
+TEMPLATES_FILE = "templates.json"
 
-# Проверка обязательных переменных
 if not BOT_TOKEN:
     raise ValueError("❌ BOT_TOKEN не найден в .env файле!")
 
